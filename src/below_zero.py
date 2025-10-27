@@ -3,7 +3,8 @@
 import pandas as pd
 
 def below_zero():
-    pass
+    df = pd.read_csv("src/kumpula-weather-2017.csv")
+    return df[df["Air temperature (degC)"] < 0].shape[0]
 
 def main():
     result = below_zero()
